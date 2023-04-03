@@ -13,9 +13,9 @@ import lombok.NoArgsConstructor;
 @Data
 @Entity
 @NoArgsConstructor
-public class User {
+public class Users {
   
-  public User(UserDTO req) {
+  public Users(UserDTO req) {
     this.username = req.username();
     this.avatar = req.avatar();
   }
@@ -24,9 +24,9 @@ public class User {
   @GeneratedValue(strategy = GenerationType.AUTO)
   private Long id;
 
-  @Column(nullable = false)
+  @Column
   private String username;
 
-  @Column(nullable = false)
+  @Column
   private String avatar;
 }

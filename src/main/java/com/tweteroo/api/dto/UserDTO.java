@@ -9,4 +9,6 @@ public record UserDTO(
 
   @NotBlank
   String avatar
-) {}
+) {
+  
+}

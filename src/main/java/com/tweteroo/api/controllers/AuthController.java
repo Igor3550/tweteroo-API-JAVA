@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.tweteroo.api.dto.UserDTO;
-import com.tweteroo.api.models.User;
+import com.tweteroo.api.models.Users;
 import com.tweteroo.api.services.AuthService;
 
 import jakarta.validation.Valid;
@@ -28,7 +28,7 @@ public class AuthController {
   }
 
   @GetMapping
-  public List<User> getAll() {
+  public List<Users> getAll() {
     return service.listAll();
   }
 }
