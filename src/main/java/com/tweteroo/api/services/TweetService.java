@@ -33,4 +33,8 @@ public class TweetService {
     if(user.isEmpty()) throw new Error("User not found");
     repository.save(new Tweet(req, user.get(0).getAvatar()));
   }
+
+  public List<Tweet> getTweetsByUsername(String username) {
+    return repository.findByUsername(username);
+  }
 }
